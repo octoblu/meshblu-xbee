@@ -1,0 +1,25 @@
+{
+  "name": "meshblu-xbee",
+  "version": "1.0.0",
+  "description": "",
+  "start": "node command.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/octoblu/meshblu-xbee.git"
+  },
+  "author": "Erik Wilson <Erik.E.Wilson@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/octoblu/meshblu-xbee/issues"
+  },
+  "homepage": "https://github.com/octoblu/meshblu-xbee",
+  "dependencies": {
+    "skynet": "^1.8.3",
+    "xbee-api": "^0.3.7",
+    "serialport": "^1.4.9",
+    "debug": "^2.1.0"
+  }
+}
