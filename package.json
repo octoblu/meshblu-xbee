@@ -1,6 +1,6 @@
 {
   "name": "meshblu-xbee",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "start": "node command.js",
   "scripts": {
@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/octoblu/meshblu-xbee",
   "dependencies": {
-    "skynet": "^1.8.3",
+    "meshblu": "^1.9.0",
     "xbee-api": "^0.3.7",
     "serialport": "^1.4.9",
     "debug": "^2.1.0"
