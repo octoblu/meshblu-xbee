@@ -1,11 +1,11 @@
 'use strict';
 
-var util = require('util');
+var util         = require('util');
 var EventEmitter = require('events').EventEmitter;
-var SerialPort = require('serialport').SerialPort
-var xbee_api = require('xbee-api');
-var waspmote = require('./lib/waspmote');
-var debug = require('debug')('meshblu-xbee');
+var SerialPort   = require('serialport').SerialPort
+var xbee_api     = require('xbee-api');
+var waspmote     = require('./lib/waspmote');
+var debug        = require('debug')('meshblu-xbee');
 
 var XBEE = xbee_api.constants;
 

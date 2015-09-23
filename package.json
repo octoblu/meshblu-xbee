@@ -1,25 +1,51 @@
 {
   "name": "meshblu-xbee",
-  "version": "1.0.1",
-  "description": "",
-  "start": "node command.js",
+  "repository": "octoblu/meshblu-xbee",
+  "version": "1.0.2",
+  "main": "connector.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "preinstall": "node -e \"try{require('./skip-install.js')}catch(e){}\"",
+    "start": "node command.js",
+    "test": "exit 0"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/octoblu/meshblu-xbee.git"
-  },
-  "author": "Erik Wilson <Erik.E.Wilson@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/octoblu/meshblu-xbee/issues"
-  },
-  "homepage": "https://github.com/octoblu/meshblu-xbee",
   "dependencies": {
-    "meshblu": "^1.9.0",
-    "xbee-api": "^0.3.7",
-    "serialport": "^1.4.9",
-    "debug": "^2.1.0"
-  }
+    "debug": "^2.2.0",
+    "lodash": "^3.10.1",
+    "meshblu": "^1.30.1",
+    "meshblu-config": "^3.1.1",
+    "serialport": "^1.7.4",
+    "xbee-api": "^0.3.12"
+  },
+  "bundledDependencies": [
+    "request",
+    "tar",
+    "fstream"
+  ],
+  "platformDependencies": {
+    "darwin": [
+      "xcode"
+    ],
+    "win32": [
+      "Windows 7 or Windows 8.1",
+      "Visual Studio Express 2013",
+      "Python 2.7.6",
+      "Open the 'Visual Studio Command Prompt' and add Python to the path."
+    ],
+    "win64": [
+      "Windows 7 or Windows 8.1",
+      "Visual Studio Express 2013",
+      "Python 2.7.6",
+      "Open the 'Visual Studio Command Prompt' and add Python to the path."
+    ],
+    "linux": [
+      "build-essential"
+    ],
+    "android": null,
+    "ios": null
+  },
+  "license": "MIT",
+  "keywords": [
+    "meshblu-connector",
+    "gateblu"
+  ]
 }
