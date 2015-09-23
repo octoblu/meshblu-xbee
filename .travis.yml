@@ -3,34 +3,13 @@ node_js:
 - '0.10'
 before_install:
   - npm install npm -g
-before_deploy:
-  - npm install ws browserify coffeeify
-  - mkdir -p deploy/meshblu-xbee/latest
-  - mkdir -p deploy/meshblu-xbee/$TRAVIS_TAG
-  - node_modules/.bin/browserify -t coffeeify -s Connector connector.js > deploy/meshblu-xbee/latest/meshblu-xbee.js
-  - gzip deploy/meshblu-xbee/latest/meshblu-xbee.js
-  - mv deploy/meshblu-xbee/latest/meshblu-xbee.js.gz deploy/meshblu-xbee/latest/meshblu-xbee.js
-  - cp deploy/meshblu-xbee/latest/meshblu-xbee.js deploy/meshblu-xbee/$TRAVIS_TAG/meshblu-xbee.js
 deploy:
-  - provider: s3
-    region: us-west-2
-    skip_cleanup: true
-    detect_encoding: true
-    access_key_id: replace-me
-    secret_access_key:
-      secure: replace-me
-    bucket: octoblu-cdn
-    local-dir: deploy
-    upload-dir: js
-    on:
-      tags: true
-      all_branches: true
   - provider: npm
     skip_cleanup: true
     clean_up: false
-    email: replace-me
+    email: serveradmin@octoblu.com
     api_key:
-      secure: replace-me
+      secure: "WEjn4vvFCiWOucAFtI73u1QnnKsYVsle7xLwKZWzAUpaSdcAhMFUD1Q4OoCsGIqQ5E+D9pdzQ7+qiH1NYhJhxFSCdvIdU63OkvbRKkRozXOQHdO/N392HcbedJ4B7FxC2x8wof3loPaBPcPmEfHYXyZM2JWw6LWHpJEH1xW/OEQ="
     on:
       tags: true
       all_branches: true
