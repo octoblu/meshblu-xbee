@@ -1,7 +1,7 @@
 {
   "name": "meshblu-xbee",
   "repository": "octoblu/meshblu-xbee",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "connector.js",
   "scripts": {
     "preinstall": "node -e \"try{require('./skip-install.js')}catch(e){}\"",
